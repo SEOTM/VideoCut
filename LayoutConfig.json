@@ -1,0 +1,311 @@
+{
+  "layouts": [
+    {
+      "name": "Prepare",
+      "label": "准备界面",
+      "IsMaxiable": true,
+      "IsResizeable": true,
+      "width": {
+        "coeff": [0, 0, 0, 0, 12, 0, 3, 0],
+        "offset": 0
+      },
+      "height": {
+        "coeff": [0, 0, 0, 0, 3, 0, 3, 0],
+        "offset": 0 
+      },
+      "ctrls": [
+        {
+          "id": 0,
+          "type": "CTRL_TYPE_WND",
+          "label": "##MAINWND",
+          "text": "",
+          "event": "",
+          "x": { "coeff": [0, 0, 0, 0, 0, 0, 0, 0], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 0, 0, 0, 0, 0], "offset": 0 },
+          "width": { "coeff": [0, 0, 0, 0, 12, 0, 3, 0], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 0, 3, 0, 3, 0], "offset": 0 }
+        },
+        {
+          "id": 1,
+          "type": "CTRL_TYPE_TITLE",
+          "label": "##TITLEBAR",
+          "text": "视频拼接剪切辅助编辑器",
+          "event": "TITLEBAR_EVENT",
+          "x": { "coeff": [0, 0, 0, 0, 0, 0, 1, 0], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 0, 0, 0, 0, 1], "offset": 0 },
+          "width": { "coeff": [0, 0, 0, 0, 12, 0, 3, 0], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 0, 1, 0, 0, 0], "offset": 0 }
+        },
+        {
+          "id": 2,
+          "type": "CTRL_TYPE_CNTR",
+          "label": "##CONTAINER",
+          "text": "",
+          "event": "",
+          "x": { "coeff": [0, 0, 0, 0, 0, 0, 0, 0], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 0, 1, 0, 0, 0], "offset": 0 },
+          "width": { "coeff": [0, 0, 0, 0, 12, 0, 3, 0], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 0, 2, 0, 3, 0], "offset": 0 }
+        },
+        {
+          "id": 3,
+          "type": "CTRL_TYPE_TEXT",
+          "label": "##TEXT_SRC",
+          "text": "源路径",
+          "event": "",
+          "x": { "coeff": [0, 0, 0, 0, 0, 0, 1, 0], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 0, 0, 0, 1, 1], "offset": 0 },
+          "width": { "coeff": [0, 0, 0, 0, 9, 0, 0, 0], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 0, 1, 0, 0, 0], "offset": 0 }
+        },
+        {
+          "id": 4,
+          "type": "CTRL_TYPE_INPUT_SINGLE",
+          "label": "##INPUT_SRC",
+          "text": "",
+          "event": "ONLY_BUFFER_PATH",
+          "x": { "coeff": [0, 0, 0, 0, 0, 0, 1, 0], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 0, 1, 0, 2, 0], "offset": 0 },
+          "width": { "coeff": [0, 0, 0, 0, 9, 0, 0, 0], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 0, 1, 0, 0, 0], "offset": 0 }
+        },
+        {
+          "id": 5,
+          "type": "CTRL_TYPE_BUTTON",
+          "label": "##BROWSE",
+          "text": "浏览",
+          "event": "FILEBROWSE",
+          "x": { "coeff": [0, 0, 0, 0, 9, 0, 2, 0], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 0, 1, 0, 2, 0], "offset": 0 },
+          "width": { "coeff": [0, 0, 0, 0, 3, 0, 0, 0], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 0, 1, 0, 0, 0], "offset": 0 }
+        },
+        {
+          "id": 6,
+          "type": "CTRL_TYPE_BUTTON",
+          "label": "##OPEN",
+          "text": "打开",
+          "event": "OPENFOLDER",
+          "x": { "coeff": [0, 0, 0, 0, 9, 0, 2, 0], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 0, 0, 0, 1, 0], "offset": 0 },
+          "width": { "coeff": [0, 0, 0, 0, 3, 0, 0, 0], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 0, 1, 0, 0, 0], "offset": 0 }
+        }
+      ]
+    },
+    {
+      "name": "Editor",
+      "label": "编辑界面",
+      "IsMaxiable": true,
+      "IsResizeable": true,
+      "width": {
+        "coeff": [0, 0, 1, 0, 0, 0, 0, 0],
+        "offset": 0
+      },
+      "height": {
+        "coeff": [0, 0, 0, 1, 0, 0, 0, 0],
+        "offset": 0
+      },
+      "ctrls": [
+        {
+          "id": 0,
+          "type": "CTRL_TYPE_WND",
+          "label": "##MAINWND",
+          "text": "",
+          "event": "",
+          "x": { "coeff": [0, 0, 0, 0, 0, 0, 0, 0], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 0, 0, 0, 0, 0], "offset": 0 },
+          "width": { "coeff": [0, 0, 1, 0, 0, 0, 0, 0], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 1, 0, 0, 0, 0], "offset": 0 }
+        },
+        {
+          "id": 1,
+          "type": "CTRL_TYPE_TITLE",
+          "label": "##TITLEBAR",
+          "text": "视频拼接剪切辅助编辑器",
+          "event": "TITLEBAR_EVENT",
+          "x": { "coeff": [0, 0, 0, 0, 0, 0, 1, 0], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 0, 0, 0, 0, 1], "offset": 0 },
+          "width": { "coeff": [0, 0, 1, 0, 0, 0, 0, 0], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 0, 1, 0, 0, 0], "offset": 0 }
+        },
+        {
+          "id": 2,
+          "type": "CTRL_TYPE_CNTR",
+          "label": "##CONTAINER",
+          "text": "",
+          "event": "",
+          "x": { "coeff": [0, 0, 0, 0, 0, 0, 0, 0], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 0, 1, 0, 0, 0], "offset": 0 },
+          "width": { "coeff": [0, 0, 1, 0, 0, 0, 0, 0], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 1, -1, 0, 0, 0], "offset": 0 }
+        },
+        {
+          "id": 3,
+          "type": "CTRL_TYPE_TEXT",
+          "label": "##TEXT_CLIP",
+          "text": "剪辑片段",
+          "event": "",
+          "x": { "coeff": [0, 0, 0, 0, 0, 0, 1, 0], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 0, 0, 0, 1, 1], "offset": 0 },
+          "width": { "coeff": [0, 0, 0, 0, 9, 0, 0, 0], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 0, 1, 0, 0, 0], "offset": 0 }
+        },
+        {
+          "id": 4,
+          "type": "CTRL_TYPE_TEXT",
+          "label": "##PREVIEW",
+          "text": "预览视频",
+          "event": "",
+          "x": { "coeff": [0, 0, 0, 0, 1, 11.5, 2, 3], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 0, 0, 0, 1, 1], "offset": 0 },
+          "width": { "coeff": [0, 0, 0, 0, 9, 0, 0, 0], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 0, 1, 0, 0, 0], "offset": 0 }
+        },
+        {
+          "id": 5,
+          "type": "CTRL_TYPE_BUTTON",
+          "label": "##ADDCLIP",
+          "text": "添加片段",
+          "event": "APPENDSPAN",
+          "x": { "coeff": [0, 0, 0, 0, -2, 11.5, 1, 3], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 0, 0, 0, 1, 0], "offset": 0 },
+          "width": { "coeff": [0, 0, 0, 0, 3, 0, 0, 0], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 0, 1, 0, 0, 0], "offset": 0 }
+        },
+        {
+          "id": 6,
+          "type": "CTRL_TYPE_BUTTON",
+          "label": "##OPER",
+          "text": "执行操作",
+          "event": "REMIXCLIPS",
+          "x": { "coeff": [0, 0, 1, 0, -3, 0, -1, 0], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 1, -2, 0, -1, 0], "offset": 0 },
+          "width": { "coeff": [0, 0, 0, 0, 3, 0, 0, 0], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 0, 1, 0, 0, 0], "offset": 0 }
+        },
+        {
+          "id": 7,
+          "type": "CTRL_TYPE_SLIDER",
+          "label": "##TIMESPANSLIDER",
+          "text": "",
+          "event": "ADJUSTSPANBYSLIDER",
+          "x": { "coeff": [0, 0, 0, 0, 1, 11.5, 2, 3], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 1, -3, 0, -3, 0], "offset": 0 },
+          "width": { "coeff": [0, 0, 1, 0, -1, -11.5, -3, -3], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 0, 0, 0, 0, 1], "offset": 0 }
+        },
+        {
+          "id": 8,
+          "type": "CTRL_TYPE_TIMEBAR",
+          "label": "##TIMEBAR_BEGIN",
+          "text": "开始时间: ",
+          "event": "ADJUSTSPANBYTIMEBARL",
+          "x": { "coeff": [0, 0, 0, 0, 1, 11.5, 2, 3], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 1, -3, 0, -2, 0], "offset": 0 },
+          "width": { "coeff": [0, 0, 0, 0, 3, 0, 0, 0], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 0, 1, 0, 0, 0], "offset": 0 }
+        },
+        {
+          "id": 9,
+          "type": "CTRL_TYPE_TIMEBAR",
+          "label": "##TIMEBAR_END",
+          "text": "结束时间: ",
+          "event": "ADJUSTSPANBYTIMEBARR",
+          "x": { "coeff": [0, 0, 0, 0, 1, 11.5, 2, 3], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 1, -2, 0, -1, 0], "offset": 0 },
+          "width": { "coeff": [0, 0, 0, 0, 3, 0, 0, 0], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 0, 1, 0, 0, 0], "offset": 0 }
+        },
+        {
+          "id": 10,
+          "type": "CTRL_TYPE_LIST",
+          "label": "##CLIPLIST",
+          "text": "",
+          "event": "LISTOPERATION",
+          "x": { "coeff": [0, 0, 0, 0, 0, 0, 1, 0], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 0, 1, 0, 2, 0], "offset": 0 },
+          "width": { "coeff": [0, 0, 0, 0, 1, 11.5, 0, 3], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 1, -2, 0, -3, 0], "offset": 0 }
+        },
+        {
+          "id": 11,
+          "type": "CTRL_TYPE_RENDER",
+          "label": "##VIDEORENDER",
+          "text": "",
+          "event": "DECODERNEXT",
+          "x": { "coeff": [0, 0, 0, 0, 1, 11.5, 2, 3], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 0, 1, 0, 2, 0], "offset": 0 },
+          "width": { "coeff": [0, 0, 1, 0, -1, -11.5, -3, -3], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 1, -4, 0, -5, -1], "offset": 0 }
+        },
+        {
+          "id": 12,
+          "type": "CTRL_TYPE_BUTTON",
+          "label": "##PLAY",
+          "text": "播放预览",
+          "event": "SETPLAYSTATE",
+          "x": { "coeff": [0, 0, 1, 0, -3, 0, -1, 0], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 1, -3, 0, -2, 0], "offset": 0 },
+          "width": { "coeff": [0, 0, 0, 0, 3, 0, 0, 0], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 0, 1, 0, 0, 0], "offset": 0 }
+        },
+        {
+          "id": 13,
+          "type": "CTRL_TYPE_COMBO",
+          "label": "##COMBO_VIDEO",
+          "text": "",
+          "event": "SELECTVIDEO",
+          "x": { "coeff": [0, 0, 1, 0, -9, 0, -1, 0], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 0, 0, 0, 1, 0], "offset": 0 },
+          "width": { "coeff": [0, 0, 0, 0, 9, 0, 0, 0], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 0, 1, 0, 0, 0], "offset": 0 }
+        },
+        {
+          "id": 14,
+          "type": "CTRL_TYPE_PROG",
+          "label": "##PROG_REMIX",
+          "text": "",
+          "event": "CHECKSTATE",
+          "x": { "coeff": [0, 0, 1, 0, -7, 0, -2, 2], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 1, -2, 0, -1, 0], "offset": 0 },
+          "width": { "coeff": [0, 0, 0, 0, 4, 0, 0, -2], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 0, 1, 0, 0, 0], "offset": 0 }
+        },
+        {
+          "id": 15,
+          "type": "CTRL_TYPE_TEXT",
+          "label": "##TEXT_SPEED",
+          "text": "速度: ",
+          "event": "",
+          "x": { "coeff": [0, 0, 1, 0, -7, 0, -2, 3], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 1, -3, 0, -2, 1], "offset": 0 },
+          "width": { "coeff": [0, 0, 0, 0, 2, 0, 1, 0], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 0, 1, 0, 0, 0], "offset": 0 }
+        },
+        {
+          "id": 16,
+          "type": "CTRL_TYPE_INPUT_REAL",
+          "label": "##INPUT_SPEED",
+          "text": "",
+          "event": "CHECKSPEED",
+          "x": { "coeff": [0, 0, 1, 0, -5, 0, -2, -1], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 1, -3, 0, -2, 0], "offset": 0 },
+          "width": { "coeff": [0, 0, 0, 0, 2, 0, 0, 1], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 0, 1, 0, 0, 0], "offset": 0 }
+        },
+        {
+          "id": 17,
+          "type": "CTRL_TYPE_BUTTON",
+          "label": "##RESET",
+          "text": "重设目录",
+          "event": "RESETFOLDER",
+          "x": { "coeff": [0, 0, 1, 0, -12, 0, -2, 0], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 0, 0, 0, 1, 0], "offset": 0 },
+          "width": { "coeff": [0, 0, 0, 0, 3, 0, 0, 0], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 0, 1, 0, 0, 0], "offset": 0 }
+        }
+      ]
+    }
+  ]
+}
