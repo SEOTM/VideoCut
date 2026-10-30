@@ -2,11 +2,19 @@
 
 ---
 
-一个基于 FFmpeg + Kanat 框架 + D3D11 的 Windows 原生视频剪辑工具，支持按文件名前缀批量分组、毫秒级片段选取、倍速预览与 Intel QSV 硬件加速编码，适合快速预处理批量视频素材。
+一个基于 [FFmpeg](https://ffmpeg.org/) + [Kanat](https://github.com/SEOTM/Kanat) 框架 + D3D11 的 Windows 原生视频剪辑工具，支持按文件名前缀批量分组、毫秒级片段选取、倍速预览与 Intel QSV 硬件加速编码，适合快速预处理批量视频素材。
 
 ## 界面主题
 
 应用提供亮色与暗色两套主题，启动时根据系统主题自动选择。界面分两层：编辑界面是基座窗口，准备界面作为内嵌浮层按需显隐。
+
+亮系主题
+
+![亮系主题](light.png)
+
+暗系主题
+
+![暗系主题](dark.png)
 
 ## 特性
 
@@ -154,7 +162,6 @@ cd out\Release
 
 ## 致谢
 
-- [Kanat](https://github.com/SEOTM/Kanat) — 声明式界面、布局几何与控件事件框架
 - [FFmpeg](https://ffmpeg.org/) — 多媒体处理核心
 - [Dear ImGui](https://github.com/ocornut/imgui) — 简洁高效的 GUI 库
 - [RapidJSON](https://rapidjson.org/) — 快速 JSON 解析
