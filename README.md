@@ -1,4 +1,4 @@
-# VideoCut（Kanat 派生版）
+# VideoCut
 
 VideoCut 是一个 Windows 原生的视频拼接与剪切辅助编辑器：FFmpeg 负责解码、裁剪与重混，Kanat 负责声明式界面、布局几何与控件事件。
 
