@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{A1C4E7F2-3B6D-4E18-9F52-7D0B2A6C4E91}</ProjectGuid>
+    <RootNamespace>VideoCut</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '17.0'">v143</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '18.0'">v145</PlatformToolset>
+    <PlatformToolset Condition="'$(PlatformToolset)' == ''">$(DefaultPlatformToolset)</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '17.0'">v143</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '18.0'">v145</PlatformToolset>
+    <PlatformToolset Condition="'$(PlatformToolset)' == ''">$(DefaultPlatformToolset)</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Label="VcpkgRoot">
+    <VcpkgRoot Condition="'$(VcpkgRoot)'=='' and '$(VCPKG_ROOT)'!=''">$(VCPKG_ROOT)</VcpkgRoot>
+    <VcpkgRoot Condition="'$(VcpkgRoot)'==''">C:\OtherApp\vcpkg</VcpkgRoot>
+  </PropertyGroup>
+  <Import Project="$(VcpkgRoot)\scripts\buildsystems\msbuild\vcpkg.props" Condition="Exists('$(VcpkgRoot)\scripts\buildsystems\msbuild\vcpkg.props')" />
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnabled>true</VcpkgEnabled>
+    <VcpkgEnableManifest>true</VcpkgEnableManifest>
+    <VcpkgManifestInstall>true</VcpkgManifestInstall>
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+    <VcpkgUseMD>false</VcpkgUseMD>
+    <VcpkgTriplet>x64-windows-static</VcpkgTriplet>
+  </PropertyGroup>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(ProjectDir)out\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)out\obj\$(Configuration)\</IntDir>
+    <TargetName>VideoCut</TargetName>
+    <LinkIncremental>true</LinkIncremental>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(ProjectDir)out\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)out\obj\$(Configuration)\</IntDir>
+    <TargetName>VideoCut</TargetName>
+    <LinkIncremental>false</LinkIncremental>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_AMD64_;UNICODE;_UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)src\app;$(ProjectDir)third_party\imgui;$(ProjectDir)third_party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 /Zc:char8_t- %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <Optimization>Disabled</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(ProjectDir)third_party\lib\debug\imguid.lib;d3d11.lib;dxgi.lib;dwmapi.lib;imm32.lib;mfplat.lib;mfuuid.lib;strmiids.lib;ws2_32.lib;ncrypt.lib;bcrypt.lib;secur32.lib;crypt32.lib;ole32.lib;uuid.lib;shell32.lib;shlwapi.lib;comdlg32.lib;advapi32.lib;user32.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /Y "$(ProjectDir)VideoCut.json" "$(OutDir)VideoCut.json" &gt;nul</Command>
+      <Message>Copying VideoCut.json</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_AMD64_;UNICODE;_UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)src\app;$(ProjectDir)third_party\imgui;$(ProjectDir)third_party;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 /Zc:char8_t- %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>$(ProjectDir)third_party\lib\release\imgui.lib;d3d11.lib;dxgi.lib;dwmapi.lib;imm32.lib;mfplat.lib;mfuuid.lib;strmiids.lib;ws2_32.lib;ncrypt.lib;bcrypt.lib;secur32.lib;crypt32.lib;ole32.lib;uuid.lib;shell32.lib;shlwapi.lib;comdlg32.lib;advapi32.lib;user32.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /Y "$(ProjectDir)VideoCut.json" "$(OutDir)VideoCut.json" &gt;nul</Command>
+      <Message>Copying VideoCut.json</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\app\AppBuffer.cpp" />
+    <ClCompile Include="src\app\AppEvents.cpp" />
+    <ClCompile Include="src\app\AppRender.cpp" />
+    <ClCompile Include="src\app\AppState.cpp" />
+    <ClCompile Include="src\app\MediaFileUtils.cpp" />
+    <ClCompile Include="src\app\MediaOrganizer.cpp" />
+    <ClCompile Include="src\app\VideoEncoder.cpp" />
+    <ClCompile Include="src\app\VideoStream.cpp" />
+    <ClCompile Include="src\framework\base\AppEnv.cpp" />
+    <ClCompile Include="src\framework\base\BasicDesign.cpp" />
+    <ClCompile Include="src\framework\base\ControlSpec.cpp" />
+    <ClCompile Include="src\framework\base\CtrlBuffer.cpp" />
+    <ClCompile Include="src\framework\base\TextWidth.cpp" />
+    <ClCompile Include="src\framework\base\mem\AllocatorHub.cpp" />
+    <ClCompile Include="src\framework\base\mem\MemoryManager.cpp" />
+    <ClCompile Include="src\framework\base\util\FileCodec.cpp" />
+    <ClCompile Include="src\framework\dispatch\Dispatch.cpp" />
+    <ClCompile Include="src\framework\dispatch\DispatchScene.cpp" />
+    <ClCompile Include="src\framework\dispatch\FrameEvent.cpp" />
+    <ClCompile Include="src\framework\dispatch\ResourceLoader.cpp" />
+    <ClCompile Include="src\framework\dispatch\UIEventHandler.cpp" />
+    <ClCompile Include="src\framework\layout\GeometrySolver.cpp" />
+    <ClCompile Include="src\framework\layout\Layout.cpp" />
+    <ClCompile Include="src\framework\layout\LayoutBuilder.cpp" />
+    <ClCompile Include="src\framework\layout\LayoutModel.cpp" />
+    <ClCompile Include="src\framework\layout\LayoutRender.cpp" />
+    <ClCompile Include="src\framework\layout\LayoutSolver.cpp" />
+    <ClCompile Include="src\framework\render\imgui\D3D11Manager.cpp" />
+    <ClCompile Include="src\framework\render\imgui\ImGuiHost.cpp" />
+    <ClCompile Include="src\framework\render\imgui\ability\ImGuiRender.cpp" />
+    <ClCompile Include="src\framework\render\imgui\control\Controls.cpp" />
+    <ClCompile Include="src\framework\render\imgui\control\Widgets.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Identity.h" />
+    <ClInclude Include="src\app\AppBuffer.h" />
+    <ClInclude Include="src\app\AppEvents.h" />
+    <ClInclude Include="src\app\AppRender.h" />
+    <ClInclude Include="src\app\AppState.h" />
+    <ClInclude Include="src\app\MediaFileUtils.h" />
+    <ClInclude Include="src\app\MediaOrganizer.h" />
+    <ClInclude Include="src\app\StreamPipe.hpp" />
+    <ClInclude Include="src\app\VideoEncoder.h" />
+    <ClInclude Include="src\app\VideoStream.h" />
+    <ClInclude Include="src\app\resource.h" />
+    <ClInclude Include="src\framework\base\AppEnv.h" />
+    <ClInclude Include="src\framework\base\BasicDesign.h" />
+    <ClInclude Include="src\framework\base\ControlSpec.h" />
+    <ClInclude Include="src\framework\base\CtrlBuffer.h" />
+    <ClInclude Include="src\framework\base\FuncPtr.h" />
+    <ClInclude Include="src\framework\base\TextWidth.h" />
+    <ClInclude Include="src\framework\base\mem\AllocatorHub.h" />
+    <ClInclude Include="src\framework\base\mem\MemoryManager.h" />
+    <ClInclude Include="src\framework\base\util\FileCodec.h" />
+    <ClInclude Include="src\framework\dispatch\Dispatch.h" />
+    <ClInclude Include="src\framework\dispatch\FrameEvent.h" />
+    <ClInclude Include="src\framework\dispatch\ResourceLoader.h" />
+    <ClInclude Include="src\framework\dispatch\UIEventHandler.h" />
+    <ClInclude Include="src\framework\layout\GeometrySolver.h" />
+    <ClInclude Include="src\framework\layout\Layout.h" />
+    <ClInclude Include="src\framework\layout\LayoutBuilder.h" />
+    <ClInclude Include="src\framework\layout\LayoutModel.h" />
+    <ClInclude Include="src\framework\layout\LayoutRender.h" />
+    <ClInclude Include="src\framework\layout\LayoutSolver.h" />
+    <ClInclude Include="src\framework\render\Render.h" />
+    <ClInclude Include="src\framework\render\imgui\D3D11Manager.h" />
+    <ClInclude Include="src\framework\render\imgui\ImGuiHost.h" />
+    <ClInclude Include="src\framework\render\imgui\ability\ImGuiRender.h" />
+    <ClInclude Include="src\framework\render\imgui\control\Controls.h" />
+    <ClInclude Include="src\framework\render\imgui\control\Widgets.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VideoCut.json" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VcpkgRoot)\scripts\buildsystems\msbuild\vcpkg.targets" Condition="Exists('$(VcpkgRoot)\scripts\buildsystems\msbuild\vcpkg.targets')" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

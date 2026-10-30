@@ -1,0 +1,33 @@
+# 构建输出
+out/
+*.slnx
+*.vcxproj.user
+*.obj
+*.pdb
+*.ilk
+*.exe
+*.exp
+*.res
+*.bin
+
+# 依赖缓存（vcpkg manifest 安装结果）
+vcpkg_installed/
+
+# IDE 与本地工作区
+.vs/
+.idea/
+
+# 临时文件
+_tmp/
+temp/
+drafts/
+*.log
+*.bak
+*.bak-*
+*.old
+*.pre-*
+*副本*
+
+# 系统元数据
+Thumbs.db
+.DS_Store

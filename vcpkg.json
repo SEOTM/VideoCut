@@ -7,14 +7,6 @@
         "qsv",
         "x264"
       ]
-    },
-    {
-      "name": "imgui",
-      "features": [
-        "dx11-binding",
-        "win32-binding"
-      ]
-    },
-    "rapidjson"
+    }
   ]
 }

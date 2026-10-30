@@ -1,0 +1,9 @@
+# 字节原样：禁止 Git 做任何行尾转换
+* -text
+
+*.lib binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary

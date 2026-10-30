@@ -1,0 +1,60 @@
+{
+  "layouts": [
+    {
+      "name": "DemoMain",
+      "label": "暗渠框架 Demo",
+      "IsMaxiable": false,
+      "IsResizeable": false,
+      "width": { "coeff": [0, 0, 1, 0, 0, 0, 0, 0], "offset": 0 },
+      "height": { "coeff": [0, 0, 0, 1, 0, 0, 0, 0], "offset": 0 },
+      "autosize": {
+        "mode": "AUTO_SIZE_BY_SCREEN_HEIGHT",
+        "unit": 0,
+        "width": 640,
+        "height": 400,
+        "controlHeight": 25,
+        "fontSize": 13,
+        "space": 10,
+        "padding": 4
+      },
+      "ctrls": [
+        {
+          "id": 0,
+          "type": "CTRL_TYPE_WND",
+          "label": "暗渠框架 Demo",
+          "text": "",
+          "event": "",
+          "parent": -1,
+          "x": { "coeff": [0, 0, 0, 0, 0, 0, 0, 0], "offset": 180 },
+          "y": { "coeff": [0, 0, 0, 0, 0, 0, 0, 0], "offset": 120 },
+          "width": { "coeff": [0, 0, 1, 0, 0, 0, 0, 0], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 1, 0, 0, 0, 0], "offset": 0 }
+        },
+        {
+          "id": 1,
+          "type": "CTRL_TYPE_TITLE",
+          "label": "##TITLEBAR",
+          "text": "暗渠框架 Demo",
+          "event": "DEMO_DRAG_WINDOW",
+          "parent": -1,
+          "x": { "coeff": [0, 0, 0, 0, 0, 0, 0, 0], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 0, 0, 0, 0, 0], "offset": 0 },
+          "width": { "coeff": [0, 0, 1, 0, 0, 0, 0, 0], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 0, 1, 0, 0, 0], "offset": 0 }
+        },
+        {
+          "id": 2,
+          "type": "CTRL_TYPE_CNTR",
+          "label": "##CONTAINER",
+          "text": "",
+          "event": "",
+          "parent": -1,
+          "x": { "coeff": [0, 0, 0, 0, 0, 0, 0, 0], "offset": 0 },
+          "y": { "coeff": [0, 0, 0, 0, 1, 0, 0, 0], "offset": 0 },
+          "width": { "coeff": [0, 0, 1, 0, 0, 0, 0, 0], "offset": 0 },
+          "height": { "coeff": [0, 0, 0, 1, -1, 0, 0, 0], "offset": 0 }
+        }
+      ]
+    }
+  ]
+}
