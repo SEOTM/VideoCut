@@ -182,8 +182,8 @@ BOOL VideoStream::InitializeReusableObjects(VideoInfo info)
 	// 变量声明区，避免goto ERR 时跳过变量声明
 	int align = 32; // 32字节对齐，满足AVFrameRGB的要求
 	// 1. 初始化 DX11 纹理对象
-	// 备注: 框架尚未向业务层提供渲染设备; 设备为空时跳过纹理创建,
-	//       视频解码 / 时长 / 重混仍可用, 仅预览画面不可用(阻塞项见 docs/MIGRATION.md)
+	// 备注: 设备为空(宿主未登记或渲染设施未就绪)时跳过纹理创建,
+	//       视频解码 / 时长 / 重混仍可用, 仅预览画面不可用
 	if (pDevice != NULL && pDeviceContext != NULL)
 	{
 		D3D11_TEXTURE2D_DESC desc = {};

@@ -3,13 +3,13 @@
 ## 1. 仓库内容
 
 ```text
-VideoCut-Kanat/
+VideoCut/
 ├─ src/
 │  ├─ main.cpp                  进程入口
 │  ├─ Identity.h                项目身份常量
 │  ├─ app/                      业务层（VideoCut 功能）
 │  └─ framework/                Kanat 框架内核
-├─ docs/                        框架文档与迁移报告
+├─ docs/                        架构、构建、布局格式等文档
 ├─ third_party/                 ImGui 1.92.8 / RapidJSON 1.1.0
 ├─ VideoCut.json                布局文档
 ├─ VideoCut.vcxproj             构建工程
@@ -98,7 +98,7 @@ cd out\Release
 
 内嵌关系由业务侧声明（`AppState::Init` 调 `Dispatch::SetLayoutNested`），布局文档本身不携带该关系；首枚布局决定窗口几何与建面字号。
 
-字段与控件类型见 [LAYOUT-FORMAT.md](LAYOUT-FORMAT.md)；业务事件名与控件缓冲的对应关系见 [MIGRATION.md](MIGRATION.md)。
+字段与控件类型见 [LAYOUT-FORMAT.md](LAYOUT-FORMAT.md)；业务事件名与控件缓冲的对应关系见 [AppEvents.md](../src/app/AppEvents.md)。
 
 ## 7. 排障
 
@@ -108,7 +108,5 @@ cd out\Release
 | 链接报 `LNK2019`（`av_*`） | 未链接 FFmpeg 静态库，或运行库（`/MT`）不一致 |
 | 启动弹窗“应用初始化失败” | 工作目录不对，或 `VideoCut.json` 不在 exe 同目录 |
 | 修改 JSON 后界面没变 | 同目录存在旧的 `VideoCut.bin`，加载链优先 bin |
-| 视频画面为占位面 | 框架未提供渲染设备访问入口，见 [MIGRATION.md](MIGRATION.md) 的 G1 |
-| 片段列表不可见 | 框架未实现列表控件绘制，见 G2 |
-| 双击标题栏无最大化 | 运行期布局重算未提供，见 G5 |
-| 窗口不能拖边调整 | 宿主窗口无调整边框与 hit test，见 G6 |
+| 双击标题栏无最大化 | 运行期布局重算尚未实现，双击只记日志 |
+| 窗口不能拖边调整 | 宿主窗口为无边框窗口，没有调整边框与 hit test |

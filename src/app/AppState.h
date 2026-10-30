@@ -7,7 +7,7 @@
 // 类名: AppState
 // 描述: VideoCut 业务状态与界面联动（静态类）
 // 备注: 本类只依赖 Kanat 的公开接口（Dispatch / Layout / CtrlBuffer / AllocatorHub），
-//       不修改框架层；视频预览所需的渲染设备入口当前阻塞，见 docs/MIGRATION.md
+//       不修改框架层；视频预览所需的渲染设备入口经 AppRender 从宿主能力表取得
 // ================================
 class AppState
 {

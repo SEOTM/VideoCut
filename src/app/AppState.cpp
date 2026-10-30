@@ -815,7 +815,7 @@ VOID AppState::OnTitleBar(VOID* obj, uint64_t oper, uint64_t param)
 	// 3. 双击最大化: 需要框架提供运行期参考尺寸重算入口, 当前阻塞
 	if (OperCode::HasCommon(oper, OPER_COMMON_DOUBLECLICK) != FALSE)
 	{
-		printf("[VIDEOCUT] 双击最大化: 待框架提供运行期布局重算入口(见 docs/MIGRATION.md)\n");
+		printf("[VIDEOCUT] 双击最大化: 待框架提供运行期布局重算入口\n");
 	}
 }
 
